@@ -61,7 +61,20 @@ display(VisFemale[VisFemale['Average'] >= 60])
 
 
 ```
+Track_Average = df.pivot_table(index = 'Track', values = 'Average').reset_index()
 
+Gender_Average = df.pivot_table(index = 'Gender', values = 'Average').reset_index()
+
+Hometown_Average = df.pivot_table(index = 'Hometown', values = 'Average').reset_index()
+
+print("\nTrack Average:")
+display(Track_Average)
+
+print("\nGender Average:")
+display(Gender_Average)
+
+print("\nHometown Average:")
+display(Hometown_Average)
 ```
 
 ---
