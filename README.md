@@ -6,7 +6,7 @@
 
 ---
 
-To start, the Pandas and Matplotlib libraries are imported, and the raw dataset is loaded into a DataFrame using `pd.read_excel()`. Since the provided dataset does not come with a pre-calculated average, a new `Average` column must be created manually. This is done by adding the scores from Math, Electronics, GEAS, and Communication, then dividing by four to establish a clean mean for every student.
+To start, the Pandas and Matplotlib libraries are imported, and the raw dataset is brought to life as a Dataframe using `pd.read_excel()`. Since the provided dataset does not include an' Average' column, a new `Average` column must be computed manually and added. This is done by adding the scores from Math, Electronics, GEAS, and Communication, then dividing by 4 to obtain a mean for each student.
 
 ```
 import pandas as pd
@@ -15,7 +15,7 @@ df = pd.read_excel('board2.xlsx')
 df['Average'] = (df['Math'] + df['Electronics'] + df['GEAS'] + df['Communication']) / 4
 ```
 
-With the data ready and the average computed, a boolean condition is set up to find rows where the `Hometown` is exactly 'Visayas' and the `Track` is 'Communication'. A separate list specifies the exact columns to keep so that the table is not cluttered with unnecessary data. Using the `.loc` accessor, the DataFrame is filtered by both the row condition and the column list simultaneously, storing the precise result in the `VisComm` variable. The `print()` statement provides a clean header, and the `display()` function is called to render the filtered table neatly in the notebook.
+A boolean condition is set up to find people where their `Hometown` is  exactly 'Visayas' and the `Track` is 'Communication'. A separate specifies the only required columns tasked for this problem. Using `.loc`  the DataFrame is filtered by both the row condition and the column list at the same time, storing the result in `VisComm`. The `print()` statement provides a clean header, and the `display()` function is called to act as a check for the processed table.
 
 ```
 row = (df['Hometown'] == 'Visayas') & (df['Track'] == 'Communication')
