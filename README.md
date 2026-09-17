@@ -76,6 +76,36 @@ display(Gender_Average)
 print("\nHometown Average:")
 display(Hometown_Average)
 ```
+```
+fig, axes = plt.subplots(1, 3, figsize=(20, 5))
+```
+
+```
+axes[0].bar(Track_Average['Track'], Track_Average['Average'])
+axes[0].set_title('Mean Average by Track')
+axes[0].set(xlabel = "Track")
+axes[0].set(ylabel = "Mean Average")
+
+axes[1].bar(Gender_Average['Gender'], Gender_Average['Average'])
+axes[1].set_title('Mean Average by Gender')
+axes[1].set(xlabel = "Gender")
+axes[1].set(ylabel = "Mean Average")
+
+axes[2].bar(Hometown_Average['Hometown'], Hometown_Average['Average'])
+axes[2].set_title('Mean Average by Hometown')
+axes[2].set(xlabel = "Hometown")
+axes[2].set(ylabel = "Mean Average")
+```
+
+```
+interpretation = ("1. Track: The Communiations Track has the highest mean average.\n"
+                   "2. Gender: Males recorded the highest mean average \n"
+                   "3. Students from Luzon have the highest mean average" )
+
+fig.text(0.001 , 0.01, interpretation)
+plt.tight_layout(rect=[0, 0.15, 1, 1])
+plt.show()
+```
 
 ---
 
