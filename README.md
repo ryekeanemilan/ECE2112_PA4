@@ -44,7 +44,7 @@ print("\nPart B: VisFemale DataFrame")
 display(VisFemale)
 ```
 
-For the final requirement of this section, the code must display a narrowed-down version of the newly created table based on academic performance. By placing the conditional bracket `VisFemale['Average'] >= 60` directly inside the `display()` function, the notebook successfully evaluates the scores and outputs only the passing students. Because this operation happens entirely within the display call, it fulfills the requirement of not permanently altering or overwriting the original `VisFemale` variable in memory.
+For the final requirement of this section, the code must display a narrowed-down version of the newly created table based on academic performance. By placing the conditional bracket `VisFemale['Average'] >= 60` directly inside the `display()` function, the notebook successfully evaluates the scores and outputs only the passing students. 
 
 ```
 print("\nPart B: VisFemale with Average >= 60")
