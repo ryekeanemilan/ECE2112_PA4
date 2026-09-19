@@ -58,7 +58,7 @@ display(VisFemale[VisFemale['Average'] >= 60])
 
 ---
 
-
+The mean averages are obtained through the `pivot_table()` function. By default, it automatically calculates the mean of the Average values grouped by the specified index, which in this case are Track, Gender, and Hometown. `reset_index()` at the end turns those indexes back into regular columns, so the resulting data is clean and easy to plot. The `print()` and `display()` functions then output these three summary tables directly to the notebook for checking.
 
 ```
 Track_Average = df.pivot_table(index = 'Track', values = 'Average').reset_index()
@@ -76,10 +76,13 @@ display(Gender_Average)
 print("\nHometown Average:")
 display(Hometown_Average)
 ```
+
+`plt.subplots(1, 3)` creates a single figure containing one row with three side-by-side plotting slots. The `figsize=(20, 5)` argument makes the entire figure wide enough to accommodate all three charts comfortably without squishing the data or overlapping the text.
+
 ```
 fig, axes = plt.subplots(1, 3, figsize=(20, 5))
 ```
-
+Each slot is filled using the `.bar()` function. For each chart, it passes the categorical column for the x-axis and the calculated averages for the y-axis. Every subplot is given a specific title using `.set_title()` and clear x and y labels using `.set()`.
 ```
 axes[0].bar(Track_Average['Track'], Track_Average['Average'])
 axes[0].set_title('Mean Average by Track')
@@ -96,6 +99,8 @@ axes[2].set_title('Mean Average by Hometown')
 axes[2].set(xlabel = "Hometown")
 axes[2].set(ylabel = "Mean Average")
 ```
+
+`fig.text()` embeds the text directly onto the bottom-left corner of the bar chart image itself. To ensure the text block doesn't overlap with the charts, `plt.tight_layout(rect=[0, 0.15, 1, 1])` squeezes the plots upward, leaving a 15% margin at the bottom before `.show()` renders the final graphic.
 
 ```
 interpretation = ("1. Track: The Communiations Track has the highest mean average.\n"
