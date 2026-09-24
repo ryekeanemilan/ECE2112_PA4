@@ -2,7 +2,7 @@
 
 # Part A: Visayas Communication DataFrame
 
-**Task:** Create a DataFrame named `VisComm` that isolates students specifically from the Visayas region who are enrolled in the Communication track. After applying these filters to the source dataset, the final table must display only the students' names, genders, math scores, electronics scores, and overall averages in that exact order. Both filtering conditions must be applied to the source dataset before the columns are selected[cite: 3].
+**Task:** Create a DataFrame named `VisComm` that isolates students specifically from the Visayas region who are enrolled in the Communication track. After applying these filters to the source dataset, the final table must display only the students' names, genders, math scores, electronics scores, and overall averages in that exact order. Both filtering conditions must be applied to the source dataset before the columns are selected.
 
 ---
 
